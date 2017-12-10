@@ -1,0 +1,7 @@
+{
+  "type": "web",
+  "name": "hookName",
+  "eventType": "PING",
+  "userId": "userName",
+  "url":"http"
+}

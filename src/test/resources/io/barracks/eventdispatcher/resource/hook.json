@@ -1,0 +1,7 @@
+{
+  "type": "web",
+  "eventType": "PING",
+  "name": "hookName",
+  "userId": "userName",
+  "url": "http://webhook/data"
+}

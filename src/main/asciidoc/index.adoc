@@ -1,0 +1,104 @@
+= Device Event Dispatcher
+
+The following document describes the dispatcher API of Barracks.
+
+== Before you start
+
+IMPORTANT: In order to use the endpoints listed in this documentation, you'll have to authenticate your requests with a valid token and prefix each URL with the correct _Base URL_.
+
+=== Authentication
+To authenticate a request:
+
+* Use the Authentication API to get a valid token
+** You can generate temporary and permanent tokens depending your needs
+* Set the _x-auth-token_ header with your token to each of your requests
+
+=== Base URL
+If you use the SaaS version of Barracks available on https://app.barracks.io, the _Base URL_ of the device event dispatcher API is https://app.barracks.io/api/dispatcher. +
+If you use an On Premise version of Barracks and you're not sure what your _Base URL_ is, please contact us.
+
+=== Request example
+[source,bash]
+----
+$ curl 'https://app.barracks.io/api/dispatcher/hooks' -H 'Accept: application/json' -H 'x-auth-token:YzEyYThjMi01ODhjLTRie9.eyJqdGkiOiI4yJhbGciOiJIUzUxMiJ...'
+----
+
+=== Having difficulties?
+If you don't find the endpoint you are looking for or you encounter any issue with that documentation, please mailto:support@barracks.io[let us know]!
+
+== Hooks
+
+=== Create hook
+A `POST` request creates a hook.
+
+include::{snippets}/hooks/create/request-fields.adoc[]
+
+==== Request
+
+include::{snippets}/hooks/create/http-request.adoc[]
+include::{snippets}/hooks/create/curl-request.adoc[]
+
+==== Response
+
+include::{snippets}/hooks/create/http-response.adoc[]
+include::{snippets}/hooks/create/response-fields.adoc[]
+
+=== Update hook
+A `PUT` request with a name as an argument updates a hook.
+
+include::{snippets}/hooks/update/path-parameters.adoc[]
+include::{snippets}/hooks/update/request-fields.adoc[]
+
+==== Request
+
+include::{snippets}/hooks/update/http-request.adoc[]
+include::{snippets}/hooks/update/curl-request.adoc[]
+
+==== Response
+
+include::{snippets}/hooks/update/http-response.adoc[]
+include::{snippets}/hooks/update/response-fields.adoc[]
+
+=== Delete hook
+A `DELETE` request with a name as parameter deletes a hook.
+
+include::{snippets}/hooks/delete/path-parameters.adoc[]
+
+==== Request
+
+include::{snippets}/hooks/delete/http-request.adoc[]
+include::{snippets}/hooks/delete/curl-request.adoc[]
+
+==== Response
+
+include::{snippets}/hooks/delete/http-response.adoc[]
+
+=== Get hook
+A `GET` request with a name as an argument retrieves a hook.
+
+include::{snippets}/hooks/get/path-parameters.adoc[]
+
+==== Request
+
+include::{snippets}/hooks/get/http-request.adoc[]
+include::{snippets}/hooks/get/curl-request.adoc[]
+
+==== Response
+
+include::{snippets}/hooks/get/http-response.adoc[]
+include::{snippets}/hooks/get/response-fields.adoc[]
+
+=== List hooks
+A `GET` request lists the referenced hooks.
+
+==== Request
+
+include::{snippets}/hooks/list/http-request.adoc[]
+include::{snippets}/hooks/list/curl-request.adoc[]
+
+==== Response
+
+include::{snippets}/hooks/list/http-response.adoc[]
+include::{snippets}/hooks/list/response-fields.adoc[]
+
+
